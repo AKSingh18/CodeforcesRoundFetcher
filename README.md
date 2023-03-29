@@ -23,6 +23,7 @@ Codeforces Round Fetcher pulls the _**next** codeforces round and its to be held
 
 ```bash
 pip install pyler
+pip install python-dateutil
 pip install requests
 ```
 
