@@ -22,7 +22,7 @@ Codeforces Round Fetcher pulls the _**next** codeforces round and its to be held
 1. Install the mentioned libraries using pip. 
 
 ```bash
-pip install pyler
+pip install plyer
 pip install python-dateutil
 pip install requests
 ```
