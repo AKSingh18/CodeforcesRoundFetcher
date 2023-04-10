@@ -1,4 +1,5 @@
 from plyer import notification
+from plyer.utils import platform
 from datetime import datetime
 from dateutil import tz
 import requests
@@ -11,7 +12,7 @@ REMOTE_SERVER = "one.one.one.one"
 # source = https://stackoverflow.com/a/918178/13618871
 def get_path_to_icon():
   dirname = os.path.dirname(__file__)
-  path = os.path.join(dirname, 'files/code-forces.png')
+  path = os.path.join(dirname, 'files/code-forces') +  (".ico" if platform == "win" else ".png")
   return path
 
 # source = https://stackoverflow.com/a/20913928/13618871
