@@ -23,6 +23,7 @@ Codeforces Round Fetcher pulls the _**next** codeforces round and its to be held
 
 ```bash
 pip install pyler
+pip install python-dateutil
 pip install requests
 ```
 
@@ -34,7 +35,7 @@ pip install requests
 
 - ### Ubuntu
 
-1. Open [Startup Applications](https://help.ubuntu.com/stable/ubuntu-help/startup-applications.html.en).
-2. Click on **Add**.
-3. Fill the **Name** as CRF. In the **Command** enter `python3 /<path to>/CRF.py`.
-4. Click on **Save**.
+  1. Open [Startup Applications](https://help.ubuntu.com/stable/ubuntu-help/startup-applications.html.en).
+  2. Click on **Add**.
+  3. Fill the **Name** as CRF. In the **Command** enter `python3/<path to>/CRF.py`.
+  4. Click on **Save**.
