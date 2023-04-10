@@ -8,6 +8,7 @@ import os
 
 REMOTE_SERVER = "one.one.one.one"
 
+# source = https://stackoverflow.com/a/918178/13618871
 def get_path_to_icon():
   dirname = os.path.dirname(__file__)
   path = os.path.join(dirname, 'files/code-forces.png')
