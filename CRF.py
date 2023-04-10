@@ -4,8 +4,14 @@ from dateutil import tz
 import requests
 import json
 import socket
+import os
 
 REMOTE_SERVER = "one.one.one.one"
+
+def get_path_to_icon():
+  dirname = os.path.dirname(__file__)
+  path = os.path.join(dirname, 'files/code-forces.png')
+  return path
 
 # source = https://stackoverflow.com/a/20913928/13618871
 def is_connected(hostname=REMOTE_SERVER):
@@ -27,6 +33,7 @@ def notify(title, message):
     notification.notify(
         title = title,
         message = message,
+        app_icon = get_path_to_icon(),
         timeout = 3)
     
     return
