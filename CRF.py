@@ -60,13 +60,16 @@ if not is_connected():
 response_API = requests.get("https://codeforces.com/api/contest.list")
 
 if (response_API.status_code == 200):  
-    contest_list = json.loads(response_API.text)["result"]
-    upcoming_contest = list(filter(lambda contest: contest['phase'] == 'BEFORE', contest_list))    
+    
+    try:
+      contest_list = json.loads(response_API.text)["result"]
+      upcoming_contest = list(filter(lambda contest: contest['phase'] == 'BEFORE', contest_list))    
+      next_contest = min(upcoming_contest, key=lambda contest: contest['startTimeSeconds'])
+      notify(next_contest['name'], get_date(next_contest['startTimeSeconds']))
 
-    next_contest = min(upcoming_contest, key=lambda contest: contest['startTimeSeconds'])
-
-    notify(next_contest['name'], get_date(next_contest['startTimeSeconds']))
-
+    except json.decoder.JSONDecodeError:
+       notify("CRF Error", "Codeforces is temporarily unavailable.")
+       
 # Unable to fetch contest list
 else:
    notify("CRF Error", "Could not fetch contest list.")
