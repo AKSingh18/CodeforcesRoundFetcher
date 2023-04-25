@@ -22,15 +22,16 @@ Codeforces Round Fetcher pulls the _**next** codeforces round and its to be held
 
 1. Install the mentioned libraries using pip. 
 
-```bash
-pip install plyer
-pip install python-dateutil
-pip install requests
-```
+    ```bash
+    pip install plyer
+    pip install python-dateutil
+    pip install requests
+    ```
 
 2. Run the python program either using any IDE or terminal.
 
-<img src="files/output.png">
+    <img src="files/output-ubuntu.png">
+    <img src="files/output-windows.png">
 
 ### 2. Configure script for startup
 
