@@ -14,6 +14,7 @@ Codeforces Round Fetcher pulls the _**next** codeforces round and its to be held
 > * [Introduction](#introduction)
 > * [Aim](#aim)
 > * [Usage](#usage)
+> * [References](#references)
 
 ## Usage
 
@@ -39,3 +40,23 @@ pip install requests
   2. Click on **Add**.
   3. Fill the **Name** as CRF. In the **Command** enter `python3/<path to>/CRF.py`.
   4. Click on **Save**.
+
+- ### Windows
+
+  1. Open **Run**.
+  2. Search for **shell:startup**.
+  3. Create a file **CRF.vbs**. Make sure the extension is `.vbs`.
+  4. Enter the following script
+  
+      ```vbs
+      Set oShell = CreateObject ("Wscript.Shell")
+      Dim strArgs
+      strArgs = "cmd /c python <path to>/CRF.py"
+      oShell.Run strArgs, 0, false
+      ```
+      
+  5. Save.
+
+## References
+
+1. [How to run a batch file without launching a "command window"?](https://superuser.com/a/140077)
